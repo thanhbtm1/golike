@@ -58,7 +58,7 @@ def key():
       sleep(1)
 os.system("clear")      
 print(banner)      
-key()       
+#key()       
 os.system("clear")
 print(banner)
 listnv = """\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
