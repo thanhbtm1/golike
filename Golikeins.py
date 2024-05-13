@@ -228,14 +228,14 @@ while True:
           quit()
         print(f"\033[1;36mAcc •{listacc[g]}• đã bị instagram hạn chế follow do spam")
         print(f"\033[1;32mĐang đổi sang acc •{listacc[g]}• để làm nhiệm vụ!!!")
-        time.sleep(2)
+        time.sleep(1)
         print(f"\033[1;34mĐã chuyển sang acc {listacc[g]}!!!")
         boqua(idjob,instagram_account_id,object_id,"follow")
         continue
     except:
       skip = boqua(idjob,instagram_account_id,object_id,"follow")
       print("                                  ",end = "\r")  
-      print("\033[1;31mBỏ Qua Job!!!",end = "\r")        
+      print("\033[1;31mBỏ Qua Job 1!!!",end = "\r")        
       loi+=1 
       if(loi >= 5):
         g+=1
@@ -271,7 +271,7 @@ while True:
         try:
           boqua(idjob,instagram_account_id,object_id,"follow")
           print("                                  ",end = "\r")  
-          print("\033[1;31mBỏ Qua Job!!!",end = "\r")        
+          print("\033[1;31mBỏ Qua Job!!! 2",end = "\r")        
           break
         except:
           pass
