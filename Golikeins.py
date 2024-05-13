@@ -213,12 +213,8 @@ while True:
       link = get["data"]["link"]
       object_id = get["data"]["object_id"]
     else:
-      while True:
-        try:
-          boqua(idjob,instagram_account_id,object_id,"like")
-          break
-        except:
-          pass
+      boqua(idjob,instagram_account_id,object_id,"like")
+      continue        
     try:
       lam = autofl(link,cookieig)
       if(lam["status"] == "fail"):
@@ -249,6 +245,7 @@ while True:
         print(f"\033[1;35mĐã đổi sang acc •{listacc[g]}• để làm nhiệm vụ!!!")
         boqua(idjob,instagram_account_id,object_id,"follow")
         continue
+      continue          
     loi = 0  
     nhantien = hoanthanh(idjob,instagram_account_id)
     if nhantien["status"] == 200:
