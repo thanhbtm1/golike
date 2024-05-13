@@ -203,15 +203,16 @@ while True:
     try:
       get = nhanjob(instagram_account_id)
       print("                                       ",end = "\r")        
-      print("\033[1;36mĐang nhận job",end = "\r")        
+      print("\033[1;36mĐang nhận job",end = "\r")
+      idjob = get["data"]["id"]  
+      link = get["data"]["link"]
+      object_id = get["data"]["object_id"]        
       break
     except:
       pass
   if(get["status"]==200):  
     if(get["lock"]["type"] == "follow"):
-      idjob = get["data"]["id"]  
-      link = get["data"]["link"]
-      object_id = get["data"]["object_id"]
+      pass
     else:
       boqua(idjob,instagram_account_id,object_id,"like")
       continue        
