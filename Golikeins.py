@@ -166,14 +166,14 @@ for i in range(len(chontkins["data"])):
     pass
 os.system("clear")  
 print(banner)
-print("\033[1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+print("\033[1;32m═════════════════════════════════════════════════════════════")
 for i in range(len(listacc)):
   mo = open(f"{listacc[i]}.txt","r")
   if(mo.read() == ""):
     print(f"\033[1;31m{i} : {listacc[i]} ~ Chưa có cookie!!!")
   else:
     print((f"\033[1;36m{i} : {listacc[i]} ~ Đã có cookie \033[1;32m✓"))
-print("\033[1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")    
+print("\033[1;32m═════════════════════════════════════════════════════════════")    
 while True:
   try:
     nhap = int(input("\033[1;35mNhập tài khoản muốn thêm cookie(enter để dừng nhập) : "))
@@ -203,7 +203,7 @@ while True:
     try:
       get = nhanjob(instagram_account_id)
       print("                                       ",end = "\r")        
-      print("\033[1;36mĐang nhận job",end = "\r")
+      print("\033[1;36mĐang nhận job và follow",end = "\r")
       idjob = get["data"]["id"]  
       link = get["data"]["link"]
       object_id = get["data"]["object_id"]        
@@ -232,7 +232,7 @@ while True:
     except:
       skip = boqua(idjob,instagram_account_id,object_id,"follow")
       print("                                  ",end = "\r")  
-      print("\033[1;31mBỏ Qua Job 1!!!",end = "\r")        
+      print("\033[1;31mBỏ Qua Job !!!",end = "\r")        
       loi+=1 
       if(loi >= 5):
         g+=1
@@ -269,7 +269,7 @@ while True:
         try:
           boqua(idjob,instagram_account_id,object_id,"follow")
           print("                                  ",end = "\r")  
-          print("\033[1;31mBỏ Qua Job!!! 2",end = "\r")        
+          print("\033[1;31mBỏ Qua Job!!!",end = "\r")        
           break
         except:
           pass
