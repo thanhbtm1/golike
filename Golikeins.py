@@ -13,10 +13,11 @@ banner = """
                       \033[1;32m   ██║   ██║  ██║██║  ██║██║
                       \033[1;34m   ██║   ╚█████╔╝╚█████╔╝███████╗
                       \033[1;36m   ╚═╝    ╚════╝  ╚════╝ ╚══════╝
-\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  \033[1;36mCode by : Thành Chần
-\033[1;34mZalo : 0335021778
-\033[1;35mNhóm Xàm xí,Báo lỗi : https://t.me/tanhuwu
-\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"""
+\033[1;32m═════════════════════════════════════════════════════════════  
+\033[1;36mCOPYRIGHT : Thành Chần
+\033[1;36mZalo : 0335021778
+\033[1;36mNhóm Xàm xí,Báo lỗi : https://t.me/tanhuwu
+\033[1;32m═════════════════════════════════════════════════════════════"""
 os.system("clear")
 print(banner)
 try:
@@ -201,6 +202,8 @@ while True:
   while True:
     try:
       get = nhanjob(instagram_account_id)
+      print("                                       ",end = "\r")        
+      print("\033[1;36mĐang nhận job",end = "\r")        
       break
     except:
       pass
@@ -231,6 +234,8 @@ while True:
         continue
     except:
       skip = boqua(idjob,instagram_account_id,object_id,"follow")
+      print("                                  ",end = "\r")  
+      print("\033[1;31mBỏ Qua Job!!!",end = "\r")        
       loi+=1 
       if(loi >= 5):
         g+=1
@@ -255,7 +260,7 @@ while True:
       m = local_time.tm_min
       s = local_time.tm_sec 
       print("                                                 ",end = "\r")
-      print(f"\033[1;36m`[{dem}]~\033[1;35m| FOLLOW |\033[1;31m SUCCESS |\033[1;33m {h}:{m}:{s} |\033[1;31m [+{tien}đ] =>\033[1;32m Tổng : {tong} VNĐ")
+      print(f"\033[1;36m`[{dem}]~\033[1;35m| FOLLOW |\033[1;31m SUCCESS |\033[1;33m {listacc[g]} |\033[1;32m {h}:{m}:{s} |\033[1;31m [+{tien}đ] =>\033[1;32m Tổng : {tong} VNĐ")
       for i in range(delay,-1,-1):
         print("                                                 ",end = "\r")
         for j in ["",".","..","..."]:
@@ -265,6 +270,8 @@ while True:
       while True:
         try:
           boqua(idjob,instagram_account_id,object_id,"follow")
+          print("                                  ",end = "\r")  
+          print("\033[1;31mBỏ Qua Job!!!",end = "\r")        
           break
         except:
           pass
