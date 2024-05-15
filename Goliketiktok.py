@@ -16,7 +16,7 @@ banner = """
 \033[1;35m═════════════════════════════════════════════════════════════
 \033[1;36mCode by : Thành Chần
 \033[1;34mZalo : 0335021778
-\033[1;35mNhóm Xàm xí,Báo lỗi : https://t.me/tanhuwu
+\033[1;35mNhóm Xàm xí,Báo lỗi : https://t.me/+iSfuzPAcGXo0NWM1
 \033[1;35m═════════════════════════════════════════════════════════════"""
 os.system("clear")
 print(banner)
@@ -176,7 +176,7 @@ while True:
       m = local_time.tm_min
       s = local_time.tm_sec 
       print("                                                 ",end = "\r")
-      print(f'\033[1;32m`[{dem}]~ \033[1;33mSuccess |\033[1;34m {nhantien["data"]["type"]} |\033[1;35m {h}:{m}:{s} | \033[1;36m[+{tien}] ₫ => \033[1;35mTổng : {tong} VNĐ')
+      print(f'\033[1;32m`[{dem}]~ \033[1;33mSuccess |\033[1;34m {nhantien["data"]["type"]} |\033[1;35m {h}:{m}:{s} | \033[1;36m[+{tien}] ₫ => \033[1;32mTổng : {tong} VNĐ')
     else:
       #print(nhantien)
       while True:
