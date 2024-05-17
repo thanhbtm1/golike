@@ -16,7 +16,7 @@ banner = """
 \033[1;35m═════════════════════════════════════════════════════════════
 \033[1;36mCode by : Thành Chần
 \033[1;34mZalo : 0335021778
-\033[1;35mNhóm Xàm xí,Báo lỗi : https://t.me/+iSfuzPAcGXo0NWM1
+\033[1;35mNhóm Xàm xí,Báo lỗi : https://zalo.me/g/drghio579
 \033[1;35m═════════════════════════════════════════════════════════════"""
 os.system("clear")
 print(banner)
