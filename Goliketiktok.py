@@ -21,8 +21,8 @@ banner = """
 \033[1;35m═════════════════════════════════════════════════════════════"""
 os.system("clear")
 for x in banner:
-    print(x,end = "")
-    sleep(0.05)
+  print(x,end = "")
+  sleep(0.05)
 print("\n")    
 try:
   Authorization = open("Authorization.txt","x")
