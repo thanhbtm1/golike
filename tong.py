@@ -27,9 +27,9 @@ def taobox(text):
   print("╚" + "═" * dai + "╝")
 def taonv(text):
   dai = len(text) + 8
-  print("\033[1;32m┏" + "━" * dai + "┓")
+  print("\033[1;33m┏" + "━" * dai + "┓")
   print(f"\033[1;36m    " + text + "    ")
-  print("\033[1;32m┗" + "━" * dai + "┛")
+  print("\033[1;33m┗" + "━" * dai + "┛")
 def key():
   try:
     ma = open("keytool.txt","x")
