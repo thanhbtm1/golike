@@ -15,9 +15,9 @@ banner = """
                       \033[1;34m   ██║   ╚█████╔╝╚█████╔╝███████╗
                       \033[1;36m   ╚═╝    ╚════╝  ╚════╝ ╚══════╝
 \033[1;34m═════════════════════════════════════════════════════════════
-\033[1;35mCOPYRIGHT : \033[1;36mThành Chần ♥
-\033[1;35mZalo : \033[1;36m0335021778 ♥
-\033[1;35mNhóm Xàm xí,Báo lỗi : \033[1;36mhttps://zalo.me/g/drghio579 ♥
+\033[1;35mCOPYRIGHT : \033[1;36mThành Chần ✌
+\033[1;35mZalo : \033[1;36m0335021778 ✌
+\033[1;35mNhóm Xàm xí,Báo lỗi : \033[1;36mhttps://zalo.me/g/drghio579 ✌
 \033[1;34m═════════════════════════════════════════════════════════════"""
 def taobox(text):
   m = len(text)
@@ -73,14 +73,20 @@ print(banner)
 #key()       
 os.system("clear")
 print(banner)
-taobox("Tool Golike ★")
-taonv("[>🍓<] => Nhập Số [1] ► Follow Tiktok")
-taonv("[>🍓<] => Nhập Số [2] ► Follow Instagram")
+taobox("Tool Golike ❄")
+taonv("[>🤑<] => Nhập Số [1] ► Follow Tiktok")
+taonv("[>🤑<] => Nhập Số [2] ► Follow Instagram")
+print("\033[1;34m═════════════════════════════════════════════════════════════")
+taobox("Tool Hustmedia ❄")
+taonv("[>🤑<] => Nhập Số [3] ► Follow Tiktok nhận điểm", " \033[1;31m[Đang hoàn thiện ╳]")
+taonv("[>🤑<] => Nhập Số [4] ► Like Tiktok nhận điểm" , " \033[1;31m[Đang hoàn thiện ╳]")
+taonv("[>🤑<] => Nhập Số [5] ► Follow Facebook (cookie)" , " \033[1;31m[Đang hoàn thiện ╳]")
+taonv("[>🤑<] => Nhập Số [6] ► Follow Instagram (cookie)" , " \033[1;31m[Đang hoàn thiện ╳]") 
 print("\033[1;34m═════════════════════════════════════════════════════════════")
 while True:
   try:
     select = int(input("\033[1;35mChọn nhiệm vụ bạn mún làm : "))
-    if select not in [1,2]:
+    if select not in [1,2,3,4,5,6]:
       print("\033[1;33mNhiệm vụ này không có trong danh sách!!!")
       continue
     break
@@ -100,3 +106,6 @@ elif select == 2:
     print("\033[1;36mTool Đang Bảo Trì Quay Lại Sau!!!")
     quit()
   exec(link)  
+else:
+  print(" \033[1;31m Tool đang hoàn thiện quay lại sau nhé:>")
+  quit()        
