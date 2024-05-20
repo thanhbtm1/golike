@@ -23,7 +23,7 @@ os.system("clear")
 for x in banner:
   print(x,end = "")
   sleep(0.001)
-print("\n")    
+print("")    
 try:
   Authorization = open("Authorization.txt","x")
   t = open("token.txt","x")
@@ -145,7 +145,7 @@ os.system("clear")
 for x in banner:
   print(x,end = "")
   sleep(0.001)
-print("\n")
+print("")
 while True:
   while True:
     try:  
