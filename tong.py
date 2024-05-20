@@ -69,7 +69,10 @@ def key():
       print("\033[1;36mKey đúng gòi bạn sài tool vui vẻ nhé:)))")
       sleep(1)
 os.system("clear")      
-print(banner)      
+for x in banner:
+    print(x,end = "")
+    sleep(0.0001)
+print("\n")     
 #key()       
 os.system("clear")
 print(banner)
