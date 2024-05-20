@@ -22,7 +22,7 @@ banner = """
 os.system("clear")
 for x in banner:
     print(x,end = "")
-    sleep(0.0001)
+    sleep(0.05)
 print("\n")    
 try:
   Authorization = open("Authorization.txt","x")
