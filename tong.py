@@ -107,5 +107,5 @@ elif select == 2:
     quit()
   exec(link)  
 else:
-  print(" \033[1;31m Tool đang hoàn thiện chưa biết ngày hoàn thành quay lại sau nhé🤡🤡")
+  print("\033[1;31mTool đang hoàn thiện chưa biết ngày hoàn thành quay lại sau nhé🤡🤡")
   quit()        
