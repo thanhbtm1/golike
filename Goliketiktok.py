@@ -1,4 +1,5 @@
 import requests,os,time
+from time import sleep
 banner = """
           \033[1;35m████████╗░█████╗░████████╗
           \033[1;34m╚══██╔══╝██╔══██╗ ╚══██╔══╝
@@ -19,7 +20,10 @@ banner = """
 \033[1;35mNhóm Xàm xí,Báo lỗi : https://zalo.me/g/drghio579
 \033[1;35m═════════════════════════════════════════════════════════════"""
 os.system("clear")
-print(banner)
+for x in banner:
+    print(x,end = "")
+    sleep(0.0001)
+print("\n")    
 try:
   Authorization = open("Authorization.txt","x")
   t = open("token.txt","x")
@@ -184,8 +188,12 @@ while True:
         m = "0"+str(minute)
       if(second < 10):
         s = "0"+str(second)
+      chuoi = f"\033[1;32m✯ {dem} ✈ \033[1;33mSuccess ●\033[1;34m {nhantien["data"]["type"]} ●\033[1;35m {h}:{m}:{s} ● \033[1;36m[+{tien}] ₫ ✈ \033[1;32mTổng : {tong} VNĐ"  
       print("                                                   ",end = "\r")
-      print(f'\033[1;32m✯ {dem} ✈ \033[1;33mSuccess ●\033[1;34m {nhantien["data"]["type"]} ●\033[1;35m {h}:{m}:{s} ● \033[1;36m[+{tien}] ₫ ✈ \033[1;32mTổng : {tong} VNĐ')
+      for x in chuoi:
+        print(x,end = "")
+        sleep(0.0001)
+      print("\n")  
     else:
       #print(nhantien)
       while True:
