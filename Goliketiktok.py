@@ -206,6 +206,7 @@ while True:
           print("\033[1;36mBỏ Qua Job!!!",end = "\r")
           break
         except:
+          qua = 0
           pass
 
 
