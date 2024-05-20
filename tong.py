@@ -71,7 +71,7 @@ def key():
 os.system("clear")      
 for x in banner:
     print(x,end = "")
-    sleep(0.0001)
+    sleep(0.05)
 print("\n")     
 #key()       
 os.system("clear")
