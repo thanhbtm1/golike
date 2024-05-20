@@ -195,7 +195,7 @@ while True:
       print("                                                    ",end = "\r")
       for x in chuoi:
         print(x,end = "")
-        sleep(0.001)
+        sleep(0.05)
       print("")  
     else:
       #print(nhantien)
@@ -208,4 +208,4 @@ while True:
         except:
           pass
 
-          
+
