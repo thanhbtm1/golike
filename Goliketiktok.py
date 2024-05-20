@@ -196,7 +196,7 @@ while True:
       for x in chuoi:
         print(x,end = "")
         sleep(0.001)
-      print("\n")  
+      print("")  
     else:
       #print(nhantien)
       while True:
