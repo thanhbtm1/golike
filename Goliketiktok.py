@@ -189,7 +189,7 @@ while True:
       if(second < 10):
         s = "0"+str(second)
       chuoi = f"\033[1;32m✯ {dem} ✈ \033[1;33mSuccess ●\033[1;34m {nhantien['data']['type']} ●\033[1;35m {h}:{m}:{s} ● \033[1;36m[+{tien}] ₫ ✈ \033[1;32mTổng : {tong} VNĐ"  
-      print("                                                   ",end = "\r")
+      print("                                                    ",end = "\r")
       for x in chuoi:
         print(x,end = "")
         sleep(0.0001)
