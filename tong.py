@@ -78,10 +78,10 @@ taonv("[>🤑<] => Nhập Số [1] ► Follow Tiktok")
 taonv("[>🤑<] => Nhập Số [2] ► Follow Instagram")
 print("\033[1;34m═════════════════════════════════════════════════════════════")
 taobox("Tool Hustmedia ❄")
-taonv("[>🤑<] => Nhập Số [3] ► Follow Tiktok nhận điểm [Đang hoàn thiện ╳]")
-taonv("[>🤑<] => Nhập Số [4] ► Like Tiktok nhận điểm [Đang hoàn thiện ╳]")
-taonv("[>🤑<] => Nhập Số [5] ► Follow Facebook (cookie) [Đang hoàn thiện ╳]")
-taonv("[>🤑<] => Nhập Số [6] ► Follow Instagram (cookie) [Đang hoàn thiện ╳]") 
+taonv("[>🤑<] => Nhập Số [3] ► Follow Tiktok nhận điểm")
+taonv("[>🤑<] => Nhập Số [4] ► Like Tiktok nhận điểm")
+taonv("[>🤑<] => Nhập Số [5] ► Follow Facebook")
+taonv("[>🤑<] => Nhập Số [6] ► Follow Instagram") 
 print("\033[1;34m═════════════════════════════════════════════════════════════")
 while True:
   try:
@@ -107,5 +107,5 @@ elif select == 2:
     quit()
   exec(link)  
 else:
-  print(" \033[1;31m Tool đang hoàn thiện quay lại sau nhé:>")
+  print(" \033[1;31m Tool đang hoàn thiện chưa biết ngày hoàn thành quay lại sau nhé:>")
   quit()        
