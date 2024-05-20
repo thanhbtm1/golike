@@ -22,7 +22,7 @@ banner = """
 os.system("clear")
 for x in banner:
   print(x,end = "")
-  sleep(0.05)
+  sleep(0.001)
 print("\n")    
 try:
   Authorization = open("Authorization.txt","x")
@@ -142,7 +142,10 @@ os.system("clear")
 dem = 0
 tong = 0
 os.system("clear")
-print(banner)
+for x in banner:
+  print(x,end = "")
+  sleep(0.001)
+print("\n")
 while True:
   while True:
     try:  
@@ -192,7 +195,7 @@ while True:
       print("                                                    ",end = "\r")
       for x in chuoi:
         print(x,end = "")
-        sleep(0.0001)
+        sleep(0.001)
       print("\n")  
     else:
       #print(nhantien)
