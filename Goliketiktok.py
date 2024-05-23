@@ -207,6 +207,7 @@ while True:
           baoloi(ads_id,object_id,account_id,nhanjob["data"]["type"])
           print("                                              ",end = "\r")
           print("\033[1;36mBỏ Qua Job!!!",end = "\r")
+          sleep(1)
           break
         except:
           qua = 0
