@@ -147,6 +147,8 @@ for x in banner:
   sleep(0.001)
 print("")
 while True:
+  print("                                     ",end = "\r") 
+  print("\033[1;33mĐang tìm chốp:))",end = "\r")        
   while True:
     try:  
       nhanjob = nhannv(account_id)
