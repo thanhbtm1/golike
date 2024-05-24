@@ -114,39 +114,65 @@ def baoloi(ads_id,object_id,account_id,loai):
     'https://gateway.golike.net/api/advertising/publishers/tiktok/skip-jobs',
     headers=headers,
     json=json_data,
-  ).json()
-chontktiktok = chonacc()
-if(chontktiktok["status"]!=200):
-  print("\033[1;34mAuthorization hoặc T sai hãy nhập lại!!!")
-  quit()
-print("\033[1;33m═════════════════════════════════════════════════════════════")
-for i in range(len(chontktiktok["data"])):
-  print(f'\033[1;36m`✯ {i+1} ✈ ● {chontktiktok["data"][i]["nickname"]} ●')
-print("\033[1;33m═════════════════════════════════════════════════════════════")    
+  ).json()  
+chontktiktok = chonacc()  
+def dsacc():
+  if(chontktiktok["status"]!=200):
+    print("\033[1;34mAuthorization hoặc T sai hãy nhập lại!!!")
+    quit()
+  print("\033[1;33m═════════════════════════════════════════════════════════════")
+  for i in range(len(chontktiktok["data"])):
+    print(f'\033[1;36m`✯ {i+1} ✈ ● {chontktiktok["data"][i]["nickname"]} ●')
+  print("\033[1;33m═════════════════════════════════════════════════════════════")   
+dsacc() 
 while True:
   try:
     luachon = int(input("\033[1;35mChọn acc để làm nhiệm vụ : "))
     while luachon > len((chontktiktok)["data"]):
       luachon = int(input("\033[1;32mAcc Này Không Có Trong Danh Sách,Hãy Nhập Lại : "))
+    account_id = chontktiktok["data"][luachon - 1]["id"]
     break  
   except:
-    print("\033[1;35mSai định dạng!!!")
-account_id = chontktiktok["data"][luachon - 1]["id"]    
+    print("\033[1;35mSai định dạng!!!") 
+print(luachon,account_id)    
 while True:
   try:
     delay = int(input("\033[1;36mNhập thời gian làm job : "))
     break
   except:
-    print("\033[1;32mSai định dạng!!!")
+    print("\033[1;31mSai định dạng!!!")
+while True:
+  try: 
+    doiacc = int(input("\033[1;36mSau bao nhiêu job fail thì yêu cầu đổi acc tiktok (không muốn thì cứ nhập 1 số siêu to khổng lồ) : "))
+    break
+  except:
+    print("\033[1;31mNhập vào 1 số!!!")    
 os.system("clear")    
 dem = 0
 tong = 0
+checkdoiacc = 0
+dsaccloi = []
+accloi = ""
 os.system("clear")
 for x in banner:
   print(x,end = "")
   sleep(0.001)
 print("")
 while True:
+  if checkdoiacc == doiacc:
+    dsaccloi.append(chontktiktok["data"][luachon - 1]["nickname"])
+    print(f"\033[1;36mCác acc tiktok {dsaccloi} có vẻ gặp vấn đề nên đổi acc chạy đe")
+    dsacc()
+    while True:
+      try:
+        luachon = int(input("\033[1;35mChọn acc để làm nhiệm vụ : "))
+        while luachon > len((chontktiktok)["data"]):
+          luachon = int(input("\033[1;32mAcc Này Không Có Trong Danh Sách,Hãy Nhập Lại : "))
+        account_id = chontktiktok["data"][luachon - 1]["id"]
+        checkdoiacc = 0
+        break  
+      except:
+        print("\033[1;35mSai định dạng!!!")
   print("                                     ",end = "\r") 
   print("\033[1;33mĐang tìm chốp:))",end = "\r")        
   while True:
@@ -199,7 +225,8 @@ while True:
       #   print(x,end = "")
       #   sleep(0.1)
       # print("")  
-      print(chuoi)      
+      print(chuoi)    
+      checkdoiacc = 0  
     else:
       #print(nhantien)
       while True:
@@ -208,9 +235,9 @@ while True:
           print("                                              ",end = "\r")
           print("\033[1;36mBỏ Qua Job!!!",end = "\r")
           sleep(1)
+          checkdoiacc+=1
           break
         except:
           qua = 0
           pass
-
 
