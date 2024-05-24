@@ -134,7 +134,6 @@ while True:
     break  
   except:
     print("\033[1;35mSai định dạng!!!") 
-print(luachon,account_id)    
 while True:
   try:
     delay = int(input("\033[1;36mNhập thời gian làm job : "))
