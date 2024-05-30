@@ -19,8 +19,8 @@ banner = """
 \033[1;35mZalo : \033[1;36m0335021778 ✌
 \033[1;35mNhóm Zalo : \033[1;36mhttps://zalo.me/g/drghio579 🤡
 \033[1;34m═════════════════════════════════════════════════════════════"""
-#print("\033[1;36mAe tải bản này chạy nhé https://www.mediafire.com/file/bxf1poocym87jpq/tanh.py/file")
-#quit()
+print("\033[1;36mAe tải bản này chạy nhé https://www.mediafire.com/file/7e5lewb8ddhl1wp/tct.py/file")
+quit()
 def taobox(text):
   m = len(text)
   dai = m + 4
