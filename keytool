@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Input Content</title>
+    <script>
+        function displayContent() {
+            const params = new URLSearchParams(window.location.search);
+            const content = params.get('text');
+            const displayArea = document.getElementById('displayArea');
+            if (content) {
+                displayArea.textContent = decodeURIComponent(content);
+            } else {
+                displayArea.textContent = "No content provided!";
+            }
+        }
+    </script>
+</head>
+<body onload="displayContent()">
+    <h1>URL Content Viewer</h1>
+    <div id="displayArea" style="border: 1px solid black; padding: 10px; margin-top: 10px;"></div>
+</body>
+</html>
