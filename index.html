@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MERRY CHRISTMAS</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .marquee span {
+            display: inline-block;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -28,16 +50,16 @@
                 <img
                     src="https://github.com/Panbap/datapanbap/blob/main/image/mery.png?raw=true">
             </div>
-            <div class="details">
+            <div class="marquee">
                 <h4 class="color2 margin">(MERRY CHRISTMAS)</h4>
                 <marquee>Sinh đến rồi.</marquee>
-                <p>Chúc bạn mùa lễ ấm áp và ngọt</p>
-                <p>ngào như tình bạn của chúng ta.</p>
-                <p>Cảm ơn bạn luôn bên cạnh tôi.</p>
-                <p>Hy vọng chúng ta sẽ có thêm nhiều</p>
-                <p>kỷ niệm đẹp trong năm tới.</p>
-                <p class="text-right">Chúc mừng Giáng Sinh!</p>
-                <p class="text-right">♥Panbap♥</p>
+                <span>Chúc bạn mùa lễ ấm áp và ngọt</span>
+                <span>ngào như tình bạn của chúng ta.</span>
+                <span>Cảm ơn bạn luôn bên cạnh tôi.</span>
+                <span>Hy vọng chúng ta sẽ có thêm nhiều</span>
+                <span>kỷ niệm đẹspan trong năm tới.</span>
+                <span class="text-right">Chúc mừng Giáng Sinh!</span>
+                <span class="text-right">♥Panbaspan♥</span>
             </div>
         </div>
     </div>
