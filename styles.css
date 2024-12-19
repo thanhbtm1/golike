@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC");
+@font-face {
+    font-family: 'Merry'; 
+    src: url('./Merry.ttf') format('truetype'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("https://github.com/Panbap/datapanbap/blob/main/image/tres.png?raw=true");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  flex-direction: column;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow: hidden;
+    height: 100%;
+  }
+}
+
+.christmas-message {
+  font-size: 80px;
+  font-family: "Merry";
+  color: rgb(241, 60, 60);
+  font-weight: bold;
+  text-align: center;
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  animation: glow 1.5s ease-in-out infinite;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  transition: opacity 1s, visibility 1s;
+  display: block;
+}
+
+@keyframes glow {
+  20% {
+    text-shadow: 0 0 5px #f7b3b3, 0 0 10px #f7b3b3, 0 0 20px #f7b3b3;
+  }
+  50% {
+    text-shadow: 0 0 10px #f7b3b3, 0 0 15px #f7b3b3, 0 0 30px #ff0000;
+  }
+  80% {
+    text-shadow: 0 0 5px #f7b3b3, 0 0 10px #f7b3b3, 0 0 20px #f7b3b3;
+  }
+}
+
+.tree-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 30px;
+}
+
+.tree-icon {
+  width: 100px;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(-5deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(5deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+.tree-icon.shake-animation {
+  animation: shake 0.1s ease-in-out 3;
+}
+
+@media (min-width: 1024px) {
+  .tree-icon {
+    width: 20vw;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tree-icon {
+    width: 50vw;
+    max-width: 400px;
+  }
+}
+
+.container {
+  text-align: center;
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#showButton {
+  background-color: #f56060;
+  color: white;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 16px;
+  padding: 15px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px #ffffff;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  animation: showButton 5s forwards;
+}
+@keyframes showButton {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+#showButton:hover {
+  background-color: #e2475c;
+}
+
+#showButton:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+@media (max-width: 600px) {
+  #showButton {
+    bottom: 60px;
+  }
+}
+.hidden {
+  display: none;
+}
+
+#guideInfo.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0s 0s;
+}
+
+#guideInfo h2,
+#guideInfo p {
+  margin: 10px 0;
+}
+
+.close-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  color: black;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+.snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  opacity: 0;
+  animation: snow 10s linear infinite;
+  box-shadow: 0 0 3px #ffffff, 0 0 1px #ffffff;
+}
+
+@keyframes snow {
+  0% {
+    top: -10px;
+    left: calc(100% * var(--random-x));
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    left: calc(100% * var(--random-x));
+    opacity: 0;
+  }
+}
+a {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 12px;
+  color: #ffffff;
+}
+h4 {
+  font-size: 26px;
+  line-height: 1px;
+  font-family: "Amatic SC", cursive !important;
+}
+
+.color1 {
+  color: #1bbc9b;
+}
+
+.color2 {
+  color: #c0392b;
+}
+
+.card {
+  color: #013243;
+  position: absolute;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 1px;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 400px;
+  background: #e0e1dc;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) perspective(2000px);
+  box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5),
+    20px 0 60px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+
+.card:hover {
+  transform: translate(-50%, -50%) perspective(2000px) rotate(15deg) scale(1.2);
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5),
+    0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #bac1ba;
+  transform-origin: bottom;
+  transform: skewX(-45deg);
+}
+
+.card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 5px;
+  height: 100%;
+  background: #92a29c;
+  transform-origin: left;
+  transform: skewY(-45deg);
+}
+
+.card .imgBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-origin: left;
+  transition: 0.7s;
+}
+
+.card .bark {
+  position: absolute;
+  background: #e0e1dc;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.card .imgBox img {
+  min-width: 250px;
+  max-height: 400px;
+}
+
+.card:hover .imgBox {
+  transform: rotateY(-135deg);
+}
+
+.card:hover .bark {
+  opacity: 1;
+  transition: 0.6s;
+  box-shadow: 300px 200px 100px rgba(0, 0, 0, 0.4) inset;
+}
+
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 0 0 10px;
+  z-index: -1;
+  margin-top: 70px;
+}
+
+.card .details p {
+  font-size: 15px;
+  line-height: 5px;
+  transform: rotate(-10deg);
+  padding: 0 0 0 20px;
+}
+
+.card .details h4 {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
